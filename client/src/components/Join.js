@@ -25,7 +25,7 @@ import {Link} from 'react-router-dom'
                         onChange={(e)=>setRoom(e.target.value)}/>
                     </div>
                 </form>
-                <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room${room}`}>
+                <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
                 <button type="submit" className="btn btn-success form-control">Sign In</button>
                 </Link>
             </div>
