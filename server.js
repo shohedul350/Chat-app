@@ -13,6 +13,13 @@ const server = http.createServer(app);
 const io = socketio(server);
 io.on('connection', (socket) => {
   console.log('we have a new connection');
+  socket.on('join', ({ name, room }, callback) => {
+    console.log(name, room);
+    const error = true;
+    if (error) {
+      callback({ error: 'error' });
+    }
+  });
   socket.on('disconnect', () => {
     console.log('user had left');
   });
