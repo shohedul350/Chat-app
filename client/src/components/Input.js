@@ -8,8 +8,8 @@ import React from 'react'
                                           <input type="text"
                                           className="form-control" 
                                           placeholder="Type a message..."
-                                          value={message}
-                                          onChange={(e)=>setMessage(e.terget.value)}
+                                          alue={message}
+                                          onChange={({ target: { value } }) => setMessage(value)}
                                           onKeyPress={(e)=> e.key === 'Enter' ? sendMessage(e) : null}
                                           style={{width:"223px"}}
                                            />

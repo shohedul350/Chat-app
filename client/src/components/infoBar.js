@@ -11,7 +11,7 @@ import React from 'react'
                 </div> 
                 </div> 
                 <div className="card-body">
-                    <h1>hello</h1>
+    
                 </div> 
                 </div>
         

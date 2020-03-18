@@ -18,20 +18,27 @@ let socket;
         socket = io(ENDPOINT);
         setName(name);
         setRoom(room)
-        socket.emit('join', {name,room}, ()=>{
-
+        socket.emit('join', {name,room}, (err)=>{
+if(err) {
+    alert(err);
+}
         });
-        return () => {
-            socket.emit('disconnect');
-            socket.off();
-        }
+       
 
     },[ENDPOINT, location.search]);
 
     useEffect(()=> {
         socket.on('message',(message)=>{
             setMessages([...messages,message])
-        })
+        });
+        // socket.on('roomData', ({ users }) => {
+        //     setUsers(users);
+        //   })
+      
+        return () => {
+            socket.emit('disconnect');
+            socket.off();
+        }
     },[messages]);
       
     const sendMessage =(e)=>{
@@ -43,10 +50,12 @@ let socket;
 
     return (
         <div className="card" style={{margin:'auto',width:'20rem'}}>
+            <div>
              <Infobar room={room}/>
               <Messages messages={messages} name={name}/>
             <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
-           
+           </div>
+          
         </div>
     )
 }
