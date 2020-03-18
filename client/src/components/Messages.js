@@ -1,12 +1,15 @@
 import React from 'react';
 import Message from './Message/Message'
-import ScrollToBotton from 'react-scroll-to-bottom'
+import image from './icons/background.png'
+// import ScrollToBottom from 'react-scroll-to-bottom';
+import FreeScrollBar from 'react-free-scrollbar';
 
 const Messages = ({ messages,name}) => (
-   <ScrollToBotton style={{padding:'5%',overflow:'auto',flex:'auto'}}>
+   <div className="bd-dark" style={{width: '100%', height: '330px'}}>
+   <FreeScrollBar>
       {messages.map((message,i)=><div key={i}><Message message={message} name={name}/></div>)}   
-   </ScrollToBotton>
-     
+      </FreeScrollBar>
+      </div>
      
     
 )

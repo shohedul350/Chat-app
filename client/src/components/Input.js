@@ -1,23 +1,23 @@
 import React from 'react'
 
- const Input = ({message,setMessage,sendMessage}) => (
-  <div class="card">
+ const Input = ({ setMessage, sendMessage, message}) => (
+  <div class="card" >
             <form className="">
-                          <div class="row">
-                                  <div class="col" >
+                          <div class="row" >
+                                  <div class="" style={{}} >
                                           <input type="text"
                                           className="form-control" 
                                           placeholder="Type a message..."
-                                          alue={message}
+                                          value={message}
                                           onChange={({ target: { value } }) => setMessage(value)}
                                           onKeyPress={(e)=> e.key === 'Enter' ? sendMessage(e) : null}
-                                          style={{width:"223px"}}
+                                          style={{width:"290px",marginLeft:'13px'}}
                                            />
                                       
                                 </div>
                               
-                                <div class="col" style={{}}>
-                                  <button className="btn btn-success" onClick={(e)=>sendMessage(e)} style={{margin:'0px'}}>Send</button>
+                                <div class="" style={{}}>
+                                  <button className="btn btn-success" onClick={e => sendMessage(e)}>Send</button>
                                 </div>
                           </div>
                 </form>
