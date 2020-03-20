@@ -7,7 +7,7 @@ import onlineIcon from './icons/onlineIcon.png';
 
                 <div class="d-flex bd-highlight mb-3">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><span><i class="fas fa-user-check"></i></span></button>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><span><i class="fas fa-globe-europe text-success"></i></span></button>
+                <div class="p-2 bd-highlight"><span><i class="fas fa-globe-europe text-success"></i></span></div>
                 <div class="p-2 bd-highlight">{room}</div>
                 <div class="ml-auto p-2 bd-highlight"><Link to="/"><span><i class="fas fa-times-circle text-danger"></i></span></Link></div>
                 </div> 

@@ -5,7 +5,7 @@ import image from './icons/background.png'
 import FreeScrollBar from 'react-free-scrollbar';
 
 const Messages = ({ messages,name}) => (
-   <div className="bd-dark" style={{width: '100%', height: '330px'}}>
+   <div className="bd-dark" style={{width: '100%', height: '330px',backgroundColor:"black"}}>
    <FreeScrollBar>
       {messages.map((message,i)=><div key={i}><Message message={message} name={name}/></div>)}   
       </FreeScrollBar>
