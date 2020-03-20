@@ -1,7 +1,5 @@
 import React from 'react';
 import Message from './Message/Message'
-import image from './icons/background.png'
-// import ScrollToBottom from 'react-scroll-to-bottom';
 import FreeScrollBar from 'react-free-scrollbar';
 
 const Messages = ({ messages,name}) => (
